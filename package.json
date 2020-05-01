@@ -1,0 +1,22 @@
+{
+  "name": "manan-bot",
+  "version": "1.0.0",
+  "description": "My First Discord Bot",
+  "author": "Manan",
+  "main": "index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^13.13.1",
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^12.2.0",
+    "node": "^14.0.0",
+    "nodemon": "^2.0.3",
+    "ts-node": "^8.9.0",
+    "typescript": "^3.8.3",
+    "winston": "^3.2.1"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "start:watch": "nodemon"
+  }
+}
