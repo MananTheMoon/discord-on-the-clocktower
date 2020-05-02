@@ -2,7 +2,6 @@ import { Message, MessageEmbed, GuildMember } from "discord.js";
 import { getRandomReply } from "../replies";
 import { getMemberFromSeat } from "../utils/memberUtils";
 import { removeNicknamePrefix } from "../utils/nicknameUtils";
-// TODO: nom # OR nom # #
 
 export const nominate = async (
   message: Message,

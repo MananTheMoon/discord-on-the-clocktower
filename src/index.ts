@@ -29,9 +29,6 @@ client.on("ready", () => {
   logger.info(client.user.tag + " - (" + client.user.id + ")");
 });
 
-//const SERVER_ADMIN = "FakeManan";
-const SERVER_ADMIN = "701973486301741066";
-
 client.on("message", (message) => {
   const delimeter = message.content.substring(0, 1);
   if (delimeter === "!" || delimeter === ".") {
@@ -40,10 +37,7 @@ client.on("message", (message) => {
 
     const additional_args = args.splice(1);
 
-    if (authStoryTell(message)) {
-      console.log("You are a storyteller");
-    }
-
+    // Command for anyone in the game room
     if (authGuildMessage(message)) {
       if (cmd == "play") {
         logger.info(`Play Command, more_args = [${additional_args}]`);
@@ -53,29 +47,26 @@ client.on("message", (message) => {
         logger.info(`Unplay Command, more_args = [${additional_args}]`);
         unplay(message, additional_args);
         return;
-      } else if (cmd == "shuffle") {
-        logger.info(`Shuffle Command`);
-        shuffle(message);
-        return;
-      } else if (cmd == "dead" || cmd == "kill") {
+      } else if (["k", "kill", "dead"].includes(cmd)) {
         logger.info(`Dead Command, more_args = [${additional_args}]`);
         dead(message, additional_args);
         return;
-      } else if (cmd == "undead" || cmd == "unkill") {
+      } else if (["undead", "unkill"].includes(cmd)) {
         logger.info(`Undead Command, more_args = [${additional_args}]`);
         undead(message, additional_args);
         return;
-      } else if (cmd == "vote" || cmd == "voted") {
+      } else if (["vote", "voted"].includes(cmd)) {
         logger.info(`Vote Command, more_args = [${additional_args}]`);
         vote(message, additional_args);
         return;
-      } else if (cmd === "nominate" || cmd === "nom") {
+      } else if (["n", "nom", "nominate", "nominiates"].includes(cmd)) {
         logger.info(`Nom Command, more_args = [${additional_args}]`);
         nominate(message, additional_args);
         return;
       }
     }
 
+    // Storyteller only commands
     if (authStoryTell(message) && authGuildMessage(message)) {
       if (cmd == "reset") {
         logger.info(`!Reset Command`);
@@ -88,6 +79,10 @@ client.on("message", (message) => {
       } else if (cmd == "unstorytell") {
         logger.info(`Unstorytell Command, more_args = [${additional_args}]`);
         unStorytell(message, additional_args);
+        return;
+      } else if (cmd == "shuffle") {
+        logger.info(`Shuffle Command`);
+        shuffle(message);
         return;
       }
     }
