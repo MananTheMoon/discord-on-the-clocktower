@@ -14,7 +14,9 @@ export const help = (message: Discord.Message) => {
     "  .dead n     Sets you (or given seat #) as dead.\n" +
     "  .undead n   Sets you (or given seat #) as alive\n" +
     "  .nom x y    You (or Player X) nominates player Y\n" +
-    "  .vote n     Uses your (or given seat's) dead vote\n\n" +
+    "  .vote n     Uses your (or given seat's) dead vote\n" +
+    "  .char list  See list of characters I know about.\n" +
+    "  .char x     Get more info about a character.\n\n" +
     "Admin Stuff:\n" +
     "  .reset        Resets all nicknames in the game\n" +
     "  .storytell    Makes you the storyteller.\n" +

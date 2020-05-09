@@ -11,7 +11,8 @@ import { storytell, unStorytell } from "./commands/storytell";
 import { help } from "./commands/help";
 import { nominate } from "./commands/nominate";
 import { getRandomReply } from "./replies";
-
+import { character } from "./commands/character";
+import { swearFilter } from "./utils/stringUtils";
 const logger = require("winston");
 const auth = require("../auth.json");
 
@@ -31,6 +32,11 @@ client.on("ready", () => {
 
 client.on("message", (message) => {
   const delimeter = message.content.substring(0, 1);
+
+  if (swearFilter(message)) {
+    return;
+  }
+
   if (delimeter === "!" || delimeter === ".") {
     var args = message.content.substring(1).split(" ");
     var cmd = args[0].toLowerCase();
@@ -94,6 +100,12 @@ client.on("message", (message) => {
 
     if (cmd === "help") {
       help(message);
+      return;
+    }
+
+    if (["c", "char", "character", "characters"].includes(cmd)) {
+      logger.info(`Char Command, more_args = [${additional_args}]`);
+      character(message, additional_args);
       return;
     }
 
