@@ -5,10 +5,12 @@ import {
 } from "../utils/nicknameUtils";
 import { getMemberFromSeat } from "../utils/memberUtils";
 
-export const storytell = (message: Discord.Message) => {
+export const storytell = (message: Discord.Message, gameNumber: number = 1) => {
   const currentNick = message.member.nickname || message.member.user.username;
   if (message.member) {
-    message.member.setNickname(setNicknamePrefixNumber(currentNick, 0));
+    message.member.setNickname(
+      setNicknamePrefixNumber(currentNick, 0, gameNumber)
+    );
   }
 };
 

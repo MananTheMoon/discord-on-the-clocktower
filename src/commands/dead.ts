@@ -9,19 +9,25 @@ import { getRandomReply } from "../replies";
 
 export const dead = (
   message: Discord.Message,
-  additional_args: string[] = []
+  additional_args: string[] = [],
+  gameNumber: number = 1
 ) => {
   if (additional_args.length) {
     const killSeat = Number(additional_args[0]);
     if (!isNaN(killSeat)) {
-      getMemberFromSeat(message.guild.members, killSeat).then((member) => {
-        if (member && member.nickname) {
-          member.setNickname(setDead(member.nickname));
-          message.channel.send(
-            getRandomReply("deadReplies", removeNicknamePrefix(member.nickname))
-          );
+      getMemberFromSeat(message.guild.members, killSeat, gameNumber).then(
+        (member) => {
+          if (member && member.nickname) {
+            member.setNickname(setDead(member.nickname));
+            message.channel.send(
+              getRandomReply(
+                "deadReplies",
+                removeNicknamePrefix(member.nickname)
+              )
+            );
+          }
         }
-      });
+      );
     }
     return;
   }
@@ -39,16 +45,19 @@ export const dead = (
 
 export const undead = (
   message: Discord.Message,
-  additional_args: string[] = []
+  additional_args: string[] = [],
+  gameNumber: number = 1
 ) => {
   if (additional_args.length) {
     const unkillSeat = Number(additional_args[0]);
     if (!isNaN(unkillSeat)) {
-      getMemberFromSeat(message.guild.members, unkillSeat).then((member) => {
-        if (member && member.nickname) {
-          member.setNickname(setUndead(member.nickname));
+      getMemberFromSeat(message.guild.members, unkillSeat, gameNumber).then(
+        (member) => {
+          if (member && member.nickname) {
+            member.setNickname(setUndead(member.nickname));
+          }
         }
-      });
+      );
     }
     return;
   }

@@ -4,14 +4,17 @@ import { getMemberFromSeat } from "../utils/memberUtils";
 
 export const vote = (
   message: Discord.Message,
-  additional_args: string[] = []
+  additional_args: string[] = [],
+  gameNumber: number = 1
 ) => {
   if (additional_args.length) {
     const voteSeat = Number(additional_args[0].replace("_", ""));
     if (!isNaN(voteSeat)) {
-      getMemberFromSeat(message.guild.members, voteSeat).then((member) => {
-        member.setNickname(setVoted(member.nickname));
-      });
+      getMemberFromSeat(message.guild.members, voteSeat, gameNumber).then(
+        (member) => {
+          member.setNickname(setVoted(member.nickname));
+        }
+      );
     }
     return;
   }

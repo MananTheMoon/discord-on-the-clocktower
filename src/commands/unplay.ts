@@ -4,16 +4,19 @@ import { getMemberFromSeat } from "../utils/memberUtils";
 
 export const unplay = (
   message: Discord.Message,
-  additional_args: string[] = []
+  additional_args: string[] = [],
+  gameNumber: number = 1
 ) => {
   if (additional_args.length) {
     const kickSeat = Number(additional_args[0].replace("_", ""));
     if (!isNaN(kickSeat)) {
-      getMemberFromSeat(message.guild.members, kickSeat).then((member) => {
-        if (member && member.nickname) {
-          member.setNickname(removeNicknamePrefix(member.nickname));
+      getMemberFromSeat(message.guild.members, kickSeat, gameNumber).then(
+        (member) => {
+          if (member && member.nickname) {
+            member.setNickname(removeNicknamePrefix(member.nickname));
+          }
         }
-      });
+      );
     }
     return;
   }

@@ -320,7 +320,7 @@
   "professor": {
     "type": "townsfolk",
     "team": "good",
-    "image": "",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/a/ac/Professor_Token.png/540px-Professor_Token.png",
     "desc": [
       "The Professor can bring someone back from the dead.",
       "  ○   Once per game, the Professor chooses a dead player. If that player is a Townsfolk, they are resurrected, becoming alive again.",
@@ -333,7 +333,7 @@
   "sailor": {
     "type": "townsfolk",
     "team": "good",
-    "image": "",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/0/01/Sailor_Token.png/540px-Sailor_Token.png",
     "desc": [
       "The Sailor is either drunk or getting somebody else drunk While the Sailor is sober, they cannot die.",
       "  ○   Each night, the Sailor chooses a player, who will probably get drunk.",
@@ -344,7 +344,7 @@
   "tea_lady": {
     "type": "townsfolk",
     "team": "good",
-    "image": "",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/e/e7/Tea_Lady_Token.png/540px-Tea_Lady_Token.png",
     "desc": [
       "The Tea Lady protects her neighbors from death...as long as they are good.",
       "  ○   If both alive neighbors of the Tea Lady are currently good, those neighbors cannot die. The Demon cannot kill them, nor the Godfather, nor the Gossip. If they are executed, they do not die. The only exception is the Assassin, who can kill someone protected from death.",
@@ -355,7 +355,7 @@
   "sweetheart": {
     "type": "outsider",
     "team": "good",
-    "image": "",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/3/34/Sweetheart_Token.png/540px-Sweetheart_Token.png",
     "desc": [
       "The Sweetheart, when they die, makes someone drunk for the rest of the game.",
       "  ○   The Storyteller chooses which player becomes drunk.",
@@ -366,7 +366,7 @@
   "lunatic": {
     "type": "outsider",
     "team": "good",
-    "image": "",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/5/56/Lunatic_Token.png/540px-Lunatic_Token.png",
     "desc": [
       "The Lunatic thinks that they are the Demon.",
       "  ○   Much like the Drunk, the Lunatic does not know their real character or real alignment. They are woken each night to attack as if they were the Demon that’s in play, but their choices have no effect because they have no Demon ability.",
@@ -378,7 +378,7 @@
   "evil_twin": {
     "type": "minion",
     "team": "evil",
-    "image": "",
+    "image": "https://bloodontheclocktower.com/wiki/images/2/24/Evil_Twin_Token.png",
     "desc": [
       "The Evil Twin mirrors a good character, and the players don'tknow which twin is good and which twin is evil.",
       "  ○   During the first night, the Evil Twin and a good player, called the Good Twin, wake to learn who each other are. If the Good Twin is executed, evil wins.",
@@ -390,7 +390,7 @@
   "witch": {
     "type": "minion",
     "team": "evil",
-    "image": "",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/c/cc/Witch_Token.png/540px-Witch_Token.png",
     "desc": [
       "The Witch curses players, so that they die if they nominate.",
       "  ○   Each night, the Witch chooses a player to curse. That player dies if they nominate any player on the next day, although their nomination still counts.",
@@ -402,7 +402,7 @@
   "fang_gu": {
     "type": "demon",
     "team": "evil",
-    "image": "",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/e/e6/Fang_Gu_Token.png/540px-Fang_Gu_Token.png",
     "desc": [
       "The Fang Gu possesses Outsiders.",
       "  ○   The first time a Fang Gu attacks an Outsider, the Fang Gu dies, and the Outsider becomes a Fang Gu and turns evil.",
@@ -415,7 +415,7 @@
   "zombuul": {
     "type": "demon",
     "team": "evil",
-    "image": "",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/c/c6/Zombuul_Token.png/540px-Zombuul_Token.png",
     "desc": [
       "The Zombuul secretly remains alive while in the grave.",
       "  ○   When the Zombuul would die for any reason, it actually doesn’t die, but the Storyteller acts as if the player has died. The second time the Zombuul dies, it dies for real, and good wins.",

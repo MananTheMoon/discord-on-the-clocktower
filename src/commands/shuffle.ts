@@ -3,9 +3,11 @@ import {
   setNicknamePrefixNumber,
   getNumberFromPrefix,
 } from "../utils/nicknameUtils";
+import { getMembersInGame } from "../utils/memberUtils";
 
-export const shuffle = (message: Discord.Message) => {
+export const shuffle = (message: Discord.Message, gameNumber: number = 1) => {
   message.guild.members.fetch().then((members) => {
+    members = getMembersInGame(members, gameNumber);
     const players = members.filter((member) => {
       if (member && member.nickname) {
         return getNumberFromPrefix(member.nickname) > 0;
@@ -19,7 +21,9 @@ export const shuffle = (message: Discord.Message) => {
       const seat =
         seats.splice(Math.floor(Math.random() * seats.length), 1)[0] + 1;
       console.log(player.nickname, " -> ", seat);
-      player.setNickname(setNicknamePrefixNumber(player.nickname, seat));
+      player.setNickname(
+        setNicknamePrefixNumber(player.nickname, seat, gameNumber)
+      );
     });
   });
 };

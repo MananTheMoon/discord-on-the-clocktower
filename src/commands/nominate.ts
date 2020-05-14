@@ -5,7 +5,8 @@ import { removeNicknamePrefix } from "../utils/nicknameUtils";
 
 export const nominate = async (
   message: Message,
-  additional_args: string[] = []
+  additional_args: string[] = [],
+  gameNumber: number = 1
 ) => {
   let nominatingPlayer: GuildMember = null;
   let targetPlayer: GuildMember = null;
@@ -19,7 +20,8 @@ export const nominate = async (
     nominatingPlayer = message.member;
     targetPlayer = await getMemberFromSeat(
       message.guild.members,
-      Number(targetSeat)
+      Number(targetSeat),
+      gameNumber
     );
   } else if (additional_args.length === 2) {
     const [nomSeat, targetSeat] = [
@@ -28,13 +30,18 @@ export const nominate = async (
     ];
     nominatingPlayer = await getMemberFromSeat(
       message.guild.members,
-      Number(nomSeat)
+      Number(nomSeat),
+      gameNumber
     );
+
     targetPlayer = await getMemberFromSeat(
       message.guild.members,
-      Number(targetSeat)
+      Number(targetSeat),
+      gameNumber
     );
   }
+
+  console.log(nominatingPlayer.nickname);
 
   if (nominatingPlayer && targetPlayer) {
     const nomNick = removeNicknamePrefix(nominatingPlayer.nickname);
