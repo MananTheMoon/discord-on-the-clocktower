@@ -13,6 +13,7 @@ import { nominate } from "./commands/nominate";
 import { getRandomReply } from "./replies";
 import { character } from "./commands/character";
 import { swearFilter } from "./utils/stringUtils";
+import { timer } from "./commands/timer";
 const logger = require("winston");
 const auth = require("../auth.json");
 
@@ -87,6 +88,12 @@ client.on("message", (message) => {
           `[G${gameNumber}]Nom Command, more_args = [${additional_args}]`
         );
         nominate(message, additional_args, gameNumber);
+        return;
+      } else if (["timer", "time"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Timer Command, more_args = [${additional_args}]`
+        );
+        timer(message, additional_args);
         return;
       }
     }

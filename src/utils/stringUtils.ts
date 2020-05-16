@@ -2,7 +2,7 @@ import { Message } from "discord.js";
 
 export const toUnformattedKey = (str: string) => {
   // Takes a string and makes it non-spaced lower-case
-  // e.g. "Scarlet Woman" --> "scarlet-woman"
+  // e.g. "Devil's Advocate" --> "devils_advocate"
   return str.toLowerCase().trim().replace(/ /g, "_").replace("'", "");
 };
 
@@ -18,6 +18,18 @@ const filterWords = [
   {
     match: /asshol/gi,
     replace: "casserol",
+  },
+  {
+    match: /cunt/gi,
+    replace: "country-music lover",
+  },
+  {
+    match: /bastard/gi,
+    replace: "buster",
+  },
+  {
+    match: /bitch/gi,
+    replace: "bunch",
   },
 ];
 

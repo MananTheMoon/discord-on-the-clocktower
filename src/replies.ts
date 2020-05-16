@@ -70,6 +70,11 @@ const replies: { [key: string]: string[] } = {
     "There's something funky with your nomination, chief. Try something like `.nom 4` to nominate the person in seat 4",
     "Yeah, I don't think you're following proper nomination protocol: `.nom seatNumber` (e.g. `.nom 3`)",
   ],
+  badTimerReplies: [
+    "You: What time is it? \nMe: One of. \nYou: One of what? \nMe: One of us should learn how to use the timer command.",
+    "Normally I'd sass you, but since you're having so much difficulty, here's an actual sugggestion. Please try again with the format: .timer [# of seconds] (e.g. `.timer 5s`)",
+    "That didn't work. Better luck next *time*!",
+  ],
   genericError: [
     "Error: I messed up at doing what you ask. I really don't know what happened.",
     "Error: I can't help you because I caught an error. Sorry",

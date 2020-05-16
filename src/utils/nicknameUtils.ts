@@ -1,12 +1,6 @@
-const FULL_PREFIX_REGEX = /^_[0-9👻✅ ]*/;
-const FULL_PREFIX_MATCHING = /^(_[0-9👻✅]*)+/;
 const GAME_PREFIX = /^([_]+)/;
-
-const FULL_PREFIX_GAMES = /^[_]*[0-9👻✅ ]*/;
 const FULL_PREFIX_GAMES_MATCHING = /^([_]*[0-9👻✅]*)+/;
 const NUMBER_PREFIX_GAME = /^[_]*[0-9]*[ ]*/;
-
-const NUMBER_PREFIX_REGEX = /^_[0-9]*[ ]*/;
 
 const GAME_PREFIXES = {
   1: "_",
@@ -55,12 +49,17 @@ export const setUndead = (nickname: string): string => {
   return nickname.replace(/[👻✅]/g, "");
 };
 
-const getNicknamePrefix = (nickname: string) => {
-  const match = nickname.match(FULL_PREFIX_REGEX);
-  if (match) {
-    return match[0];
-  }
-};
+// const FULL_PREFIX_GAMES = /^[_]*[0-9👻✅ ]*/;
+// const NUMBER_PREFIX_REGEX = /^_[0-9]*[ ]*/;
+// const FULL_PREFIX_REGEX = /^_[0-9👻✅ ]*/;
+// const FULL_PREFIX_MATCHING = /^(_[0-9👻✅]*)+/;
+
+// const getNicknamePrefix = (nickname: string) => {
+//   const match = nickname.match(FULL_PREFIX_REGEX);
+//   if (match) {
+//     return match[0];
+//   }
+// };
 
 // export const setDead = (nickname: string): string => {
 //   return setUndead(nickname).replace(FULL_PREFIX_MATCHING, "$1👻✅");
