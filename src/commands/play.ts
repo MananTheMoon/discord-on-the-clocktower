@@ -3,6 +3,7 @@ import {
   setNicknamePrefixNumber,
   getNumberFromPrefix,
 } from "../utils/nicknameUtils";
+import { getMembersInGame } from "../utils/memberUtils";
 
 export const play = (
   message: Discord.Message,
@@ -23,8 +24,9 @@ export const play = (
     .fetch()
     .then(
       (members) => {
+        const membersInGame = getMembersInGame(members, gameNumber);
         let usedSeats = [];
-        members.each((member) => {
+        membersInGame.each((member) => {
           if (member && member.nickname) {
             const memberNumber = getNumberFromPrefix(member.nickname);
             usedSeats.push(memberNumber);
