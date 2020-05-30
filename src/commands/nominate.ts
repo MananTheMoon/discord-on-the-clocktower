@@ -41,8 +41,6 @@ export const nominate = async (
     );
   }
 
-  console.log(nominatingPlayer.nickname);
-
   if (nominatingPlayer && targetPlayer) {
     const nomNick = removeNicknamePrefix(nominatingPlayer.nickname);
     const targetNick = removeNicknamePrefix(targetPlayer.nickname);

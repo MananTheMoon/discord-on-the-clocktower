@@ -15,6 +15,7 @@ import { character } from "./commands/character";
 import { swearFilter } from "./utils/stringUtils";
 import { timer } from "./commands/timer";
 import { townSquare } from "./commands/townsquare";
+import { announce } from "./commands/announce";
 const logger = require("winston");
 const auth = require("../auth.json");
 
@@ -101,6 +102,12 @@ client.on("message", (message) => {
           `[G${gameNumber}] Town Square Command, more_args = [${additional_args}]`
         );
         townSquare(message, gameNumber);
+        return;
+      } else if (["announce", "public"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Town Square Command, more_args = [${additional_args}]`
+        );
+        announce(message, additional_args);
         return;
       }
     }

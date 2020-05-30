@@ -63,4 +63,10 @@ export const undead = (
   }
 
   message.member.setNickname(setUndead(message.member.nickname));
+  message.channel.send(
+    getRandomReply(
+      "undeadReplies",
+      removeNicknamePrefix(message.member.nickname)
+    )
+  );
 };

@@ -9,7 +9,6 @@ export const help = (message: Discord.Message) => {
     "General Commands:\n" +
     "  .play       Add yourself to the upcoming game\n" +
     "  .unplay n   Remove yourself (or seat n) from game.\n" +
-    "  .shuffle    Randomizes seating order.\n" +
     "  .count n    Shows the role splits for n players\n" +
     "  .dead n     Sets you (or given seat #) as dead.\n" +
     "  .undead n   Sets you (or given seat #) as alive\n" +
@@ -19,8 +18,10 @@ export const help = (message: Discord.Message) => {
     "  .char x     Get more info about a character.\n\n" +
     "  .timer n    Set a timer for n seconds/minutes.\n" +
     "  .ts         Show living/dead players, & needed votes.\n" +
+    "  .announce x Publicly annouce a message x.\n" +
     "Admin Stuff:\n" +
     "  .reset        Resets all nicknames in the game\n" +
+    "  .shuffle      Randomizes seating order.\n" +
     "  .storytell    Makes you the storyteller.\n" +
     "  .unstorytell  Makes you not the storyteller.\n" +
     "```\n";
