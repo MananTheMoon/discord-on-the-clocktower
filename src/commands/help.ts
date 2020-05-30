@@ -17,11 +17,12 @@ export const help = (message: Discord.Message) => {
     "  .vote n     Uses your (or given seat's) dead vote\n" +
     "  .char list  See list of characters I know about.\n" +
     "  .char x     Get more info about a character.\n\n" +
+    "  .timer n    Set a timer for n seconds/minutes.\n" +
+    "  .ts         Show living/dead players, & needed votes.\n" +
     "Admin Stuff:\n" +
     "  .reset        Resets all nicknames in the game\n" +
     "  .storytell    Makes you the storyteller.\n" +
     "  .unstorytell  Makes you not the storyteller.\n" +
-    "  .timer n      Set a timer for n seconds/minutes.\n" +
     "```\n";
 
   message.channel.send(help_text);

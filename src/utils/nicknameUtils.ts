@@ -37,6 +37,10 @@ export const removeNicknamePrefix = (nickname: string) => {
   return nickname.replace(FULL_PREFIX_GAMES_MATCHING, "").trim();
 };
 
+export const getIsDead = (nickname: string): boolean => {
+  return nickname.includes("👻");
+};
+
 export const setDead = (nickname: string): string => {
   return setUndead(nickname).replace(FULL_PREFIX_GAMES_MATCHING, "$1👻✅");
 };

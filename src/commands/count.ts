@@ -8,7 +8,7 @@ import { getRandomReply } from "../replies";
 const FULL_COUNT_IMG =
   "https://media.discordapp.net/attachments/701121836423053362/701124887309189160/player_count_chart.png";
 
-interface ICharacterCount {
+export interface ICharacterCount {
   townsfolk: number;
   outsider: number;
   minion: number;

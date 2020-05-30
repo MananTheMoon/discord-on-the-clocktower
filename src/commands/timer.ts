@@ -26,9 +26,13 @@ export const timer = (message: Message, additional_args: string[] = []) => {
   message.channel.send(setTimerMessage(time)).then((timerMessage) => {
     const interval = setInterval(() => {
       time--;
-      timerMessage.edit(setTimerMessage(time));
+      if (time % 5 == 0 || time < 10) {
+        timerMessage.edit(setTimerMessage(time > 0 ? time : 0));
+      }
+
       if (time <= 0) {
-        message.channel.send("@here Timer complete!");
+        console.log(message.channel);
+        message.channel.send(`<#${message.channel.id}>Timer complete!`);
         clearInterval(interval);
       }
     }, 1000);

@@ -14,6 +14,7 @@ import { getRandomReply } from "./replies";
 import { character } from "./commands/character";
 import { swearFilter } from "./utils/stringUtils";
 import { timer } from "./commands/timer";
+import { townSquare } from "./commands/townsquare";
 const logger = require("winston");
 const auth = require("../auth.json");
 
@@ -94,6 +95,12 @@ client.on("message", (message) => {
           `[G${gameNumber}] Timer Command, more_args = [${additional_args}]`
         );
         timer(message, additional_args);
+        return;
+      } else if (["ts", "townsquare"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Town Square Command, more_args = [${additional_args}]`
+        );
+        townSquare(message, gameNumber);
         return;
       }
     }

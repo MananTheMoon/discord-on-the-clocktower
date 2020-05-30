@@ -31,6 +31,10 @@ const filterWords = [
     match: /bitch/gi,
     replace: "bunch",
   },
+  {
+    match: /lame/gi,
+    replace: "lambo",
+  },
 ];
 
 export const swearFilter = (message: Message): boolean => {
