@@ -421,7 +421,11 @@
       "  ○   When the Zombuul would die for any reason, it actually doesn’t die, but the Storyteller acts as if the player has died. The second time the Zombuul dies, it dies for real, and good wins.",
       "  ○   The seemingly dead Zombuul counts as a dead player in almost every way. The player’s life token on the Town Square flips to indicate their death. The next time they vote, they lose their vote token. They cannot nominate, they may vote with the Voudon, they’re not an alive neighbor for the Tea Lady, and so on. The only difference is that the game continues, the Zombuul still attacks, and the game continues if just 2 other players are alive.",
       "  ○   The Zombuul only wakes at night to attack if nobody died that day. If a dead player is executed, the player can’t die again, so the Zombuul would still wake.",
-      "  ○   If a drunk or poisoned Zombuul dies, good wins. If a “dead” Zombuul becomes drunk or poisoned, the players are not told that the player is alive."
+      "  ○   If a drunk or poisoned Zombuul dies, good wins. If a “dead” Zombuul becomes drunk or poisoned, the players are not told that the player is alive.",
+      "",
+      "NOTE: There's a lot of confusion about how zombuul's appearance of death works with other abilities. It depends on the storyteller, but here is my suggestion on how it should resolve:",
+      "  ○   The once-killed zombuul should register as dead. Things that count dead players would count a once-killed zombuul, and this zombuul is not considered 'alive' for any other abilities.",
+      "  ○   However, the once-killed zombuul did not actually 'die'. Undertaker gets no info after the zombuul is executed once because it did not die."
     ]
   }
 }

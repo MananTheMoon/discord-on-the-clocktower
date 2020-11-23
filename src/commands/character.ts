@@ -26,7 +26,7 @@ export const character = (message: Message, additional_args: string[] = []) => {
 
     const charName = toUnformattedKey(arg);
     const character = characters[charName];
-    console.log(character);
+
     if (character) {
       const embedMessage = new MessageEmbed();
       embedMessage
@@ -43,7 +43,7 @@ export const character = (message: Message, additional_args: string[] = []) => {
 };
 
 export const characterList = (message: Message) => {
-  const charNames = Object.keys(characters);
+  const charNames = Object.keys(characters).sort();
   message.reply(
     ["Here is a list of characters I know:", ...charNames].join("\n\t")
   );

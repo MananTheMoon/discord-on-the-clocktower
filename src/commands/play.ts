@@ -20,36 +20,25 @@ export const play = (
     }
     return;
   }
-  message.guild.members
-    .fetch()
-    .then(
-      (members) => {
-        const membersInGame = getMembersInGame(members, gameNumber);
-        let usedSeats = [];
-        membersInGame.each((member) => {
-          if (member && member.nickname) {
-            const memberNumber = getNumberFromPrefix(member.nickname);
-            usedSeats.push(memberNumber);
-          }
-        });
 
-        let playerSeat = 1;
-        while (usedSeats.includes(playerSeat)) {
-          playerSeat++;
-        }
+  const membersCache = message.guild.members.cache;
+  const membersInGame = getMembersInGame(membersCache, gameNumber);
+  let usedSeats = [];
+  membersInGame.each((member) => {
+    if (member && member.nickname) {
+      const memberNumber = getNumberFromPrefix(member.nickname);
+      usedSeats.push(memberNumber);
+    }
+  });
 
-        message.member
-          .setNickname(
-            setNicknamePrefixNumber(currentNick, playerSeat, gameNumber)
-          )
-          .catch((err) => {
-            console.log(
-              `Failed to update ${message.member.user.username}`,
-              err
-            );
-          });
-      },
-      () => {}
-    )
-    .catch((err) => console.log(err));
+  let playerSeat = 1;
+  while (usedSeats.includes(playerSeat)) {
+    playerSeat++;
+  }
+
+  message.member
+    .setNickname(setNicknamePrefixNumber(currentNick, playerSeat, gameNumber))
+    .catch((err) => {
+      console.log(`Failed to update ${message.member.user.username}`, err);
+    });
 };

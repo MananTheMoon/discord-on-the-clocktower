@@ -6,8 +6,10 @@ export const getMemberFromSeat = (
   seat: number,
   gameNumber: number = 1
 ): Promise<Discord.GuildMember> => {
-  return members.fetch().then((members) => {
-    const membersInGame = getMembersInGame(members, gameNumber);
+  // TODO (Manan) - with the cache in place, we no longer need this method to
+  // return a promise
+  return Promise.resolve().then(() => {
+    const membersInGame = getMembersInGame(members.cache, gameNumber);
     let desiredMember = null;
     membersInGame.every((member) => {
       if (member && member.nickname) {

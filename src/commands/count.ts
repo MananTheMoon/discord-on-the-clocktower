@@ -21,7 +21,6 @@ export const count = (
 ) => {
   if (additional_args.length) {
     const requestedCount = additional_args[0];
-    console.log(requestedCount);
     const cc: ICharacterCount = CharacterCounts[requestedCount];
     if (cc) {
       message.channel.send(

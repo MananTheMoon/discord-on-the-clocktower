@@ -16,6 +16,7 @@ import { swearFilter } from "./utils/stringUtils";
 import { timer } from "./commands/timer";
 import { townSquare } from "./commands/townsquare";
 import { announce } from "./commands/announce";
+import { raiseHand, lowerHand } from "./commands/handVoting";
 const logger = require("winston");
 const auth = require("../auth.json");
 
@@ -39,7 +40,7 @@ const RoomIds = {
   "702639156576256062": 3, // test room
 };
 
-client.on("message", (message) => {
+client.on("message", async (message) => {
   const delimeter = message.content.substring(0, 1);
   const gameNumber = RoomIds[message.channel.id];
 
@@ -48,6 +49,7 @@ client.on("message", (message) => {
   }
 
   if (delimeter === "!" || delimeter === ".") {
+    const allMembers = await message.guild.members.fetch();
     var args = message.content.substring(1).split(" ");
     var cmd = args[0].toLowerCase();
 
@@ -105,9 +107,21 @@ client.on("message", (message) => {
         return;
       } else if (["announce", "public"].includes(cmd)) {
         logger.info(
-          `[G${gameNumber}] Town Square Command, more_args = [${additional_args}]`
+          `[G${gameNumber}] Announce Command, more_args = [${additional_args}]`
         );
         announce(message, additional_args);
+        return;
+      } else if (["up", "yes", "raise"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Hand Up Command, more_args = [${additional_args}]`
+        );
+        raiseHand(message, additional_args, gameNumber);
+        return;
+      } else if (["down", "no", "lower"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Hand Up Command, more_args = [${additional_args}]`
+        );
+        lowerHand(message, additional_args, gameNumber);
         return;
       }
     }

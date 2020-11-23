@@ -2,6 +2,12 @@ import { Message, MessageEmbed, GuildMember } from "discord.js";
 import { getRandomReply } from "../replies";
 import { getMemberFromSeat } from "../utils/memberUtils";
 import { removeNicknamePrefix } from "../utils/nicknameUtils";
+import {
+  lowerAllHands,
+  setLastTownSquareMessage,
+  getGameState,
+} from "../utils/gameState";
+import { townSquare } from "./townsquare";
 
 export const nominate = async (
   message: Message,
@@ -16,6 +22,11 @@ export const nominate = async (
     return;
   }
   if (additional_args.length === 1) {
+    if (["done", "over", "close", "complete"].includes(additional_args[0])) {
+      finishNom(gameNumber, message);
+
+      return;
+    }
     const targetSeat = additional_args[0].replace("_", "");
     nominatingPlayer = message.member;
     targetPlayer = await getMemberFromSeat(
@@ -42,6 +53,7 @@ export const nominate = async (
   }
 
   if (nominatingPlayer && targetPlayer) {
+    lowerAllHands(gameNumber);
     const nomNick = removeNicknamePrefix(nominatingPlayer.nickname);
     const targetNick = removeNicknamePrefix(targetPlayer.nickname);
     const embedMessage = new MessageEmbed()
@@ -50,11 +62,25 @@ export const nominate = async (
       .setDescription(`${nomNick} nominates ${targetNick} for execution`)
       .setThumbnail(targetPlayer.user.avatarURL());
 
-    message.channel.send(embedMessage).catch((e) => {
-      console.log("Failed promise");
-      message.channel.send(getRandomReply("genericError"));
-    });
+    message.channel
+      .send(embedMessage)
+      .catch((e) => {
+        console.log("Failed promise");
+        message.channel.send(getRandomReply("genericError"));
+      })
+      .then(() => {
+        townSquare(message, gameNumber);
+      });
   } else {
     message.channel.send(getRandomReply("badNominationReplies"));
   }
+};
+
+export const finishNom = (gameNumber: number = 1, message: Message) => {
+  const gameState = getGameState(gameNumber);
+  const votes = Object.keys(gameState.raisedHands).filter((key) => {
+    return gameState.raisedHands[Number(key)] === true;
+  });
+  message.channel.send(`Nomination over. ${votes.length} votes.`);
+  setLastTownSquareMessage(gameNumber, undefined);
 };

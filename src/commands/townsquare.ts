@@ -4,14 +4,35 @@ import { getIsDead, getNumberFromPrefix } from "../utils/nicknameUtils";
 import { ICharacterCount } from "./count";
 import * as CharacterCounts from "../../data/character-counts.json";
 import { getRandomReply } from "../replies";
+import { getGameState, setLastTownSquareMessage } from "../utils/gameState";
 
 export const townSquare = async (message: Message, gameNumber: number = 1) => {
-  const players = getMembersInGame(
-    await message.guild.members.fetch(),
-    gameNumber
-  );
+  const townSquareDescription = await getTownSquareContent(message, gameNumber);
+  const embedMessage = new MessageEmbed()
+    .setColor("#ff4000")
+    .setDescription(townSquareDescription);
 
-  const embedMessage = new MessageEmbed().setColor("#ff4000");
+  return message.channel
+    .send(embedMessage)
+    .catch((e) => {
+      console.log("Failed promise");
+      message.channel.send(getRandomReply("genericError"));
+    })
+    .then((fulfilled) => {
+      if (fulfilled) {
+        setLastTownSquareMessage(gameNumber, fulfilled);
+      }
+    });
+};
+
+export const getTownSquareContent = async (
+  message: Message,
+  gameNumber: number = 1
+) => {
+  const players = getMembersInGame(message.guild.members.cache, gameNumber);
+
+  const gameState = getGameState(gameNumber);
+
   let townSquareDescription = [];
   let livingPlayers = 0;
   let deadPlayers = 0;
@@ -27,8 +48,20 @@ export const townSquare = async (message: Message, gameNumber: number = 1) => {
       } else {
         deadPlayers++;
       }
+      let handRaisedText = "";
+      switch (gameState.raisedHands[getNumberFromPrefix(player.nickname)]) {
+        case true:
+          handRaisedText = "🖖";
+          break;
+        case false:
+          handRaisedText = "⍱";
+          break;
+        default:
+          handRaisedText = "";
+      }
+
       townSquareDescription.push(
-        player.nickname.replace(/^[_]+([0-9]+)/, "$1. ")
+        `${player.nickname.replace(/^[_]+([0-9]+)/, "$1. ")} ${handRaisedText}`
       );
     });
 
@@ -44,10 +77,6 @@ export const townSquare = async (message: Message, gameNumber: number = 1) => {
   );
 
   console.log(townSquareDescription);
-  embedMessage.setDescription(townSquareDescription.join("\n"));
 
-  message.channel.send(embedMessage).catch((e) => {
-    console.log("Failed promise");
-    message.channel.send(getRandomReply("genericError"));
-  });
+  return townSquareDescription.join("\n");
 };
