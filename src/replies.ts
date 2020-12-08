@@ -127,6 +127,12 @@ const replies: { [key: string]: string[] } = {
     "I don't know how to handle that command. If you don't mind telling me exactly what you'd like that command to accomplish (in valid Node JavaScript), I'll be sure to have Manan add it to my codebase!",
     "English, do you speak it? Because I don't. I'm just programmed to parse a handful of commands, and that's not one of them.",
   ],
+  scriptNotFound: [
+    "I've never heard of that script in my life.",
+    "I searched high and low for that script, but came up empty.",
+    "Oh my god, that is the biggest typo I've ever seen. It doesn't remotely resemble a script name.",
+    "My search engine didn't find any results when looking for that script. But then again, I'm powered by Bing, so what do I know?",
+  ],
 };
 
 export const getRandomReply = (key: string, arg: string = "") => {

@@ -17,6 +17,8 @@ import { timer } from "./commands/timer";
 import { townSquare } from "./commands/townsquare";
 import { announce } from "./commands/announce";
 import { raiseHand, lowerHand } from "./commands/handVoting";
+import { scripts } from "./commands/scripts";
+import { order } from "./commands/order";
 const logger = require("winston");
 const auth = require("../auth.json");
 
@@ -98,6 +100,18 @@ client.on("message", async (message) => {
           `[G${gameNumber}] Timer Command, more_args = [${additional_args}]`
         );
         timer(message, additional_args);
+        return;
+      } else if (["scripts"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Script Command, more_args = [${additional_args}]`
+        );
+        scripts(message);
+        return;
+      } else if (["order", "night-order", "ord", "night_order"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Script Command, more_args = [${additional_args}]`
+        );
+        order(message, additional_args);
         return;
       } else if (["ts", "townsquare"].includes(cmd)) {
         logger.info(
