@@ -4,6 +4,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/4/4d/Washerwoman_Token.png/540px-Washerwoman_Token.png",
+    "shortDesc": "You start knowing that 1 of 2 players is a particular Townsfolk.",
     "desc": [
       "The Washerwoman learns that a specific Townsfolk is in play, but not who is playing it.",
       "  ○  During the first night, the Washerwoman is woken, shown two players, and learns the character of one of them.",
@@ -16,6 +17,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/8/86/Librarian_Token.png/540px-Librarian_Token.png",
+    "shortDesc":  "You start knowing that 1 of 2 players is a particular Outsider. (Or that zero are in play.)",
     "desc": [
       "The Librarian learns that a specific Outsider is in play, but not who is playing it.",
       "  ○  During the first night, the Librarian learns that one of two players is a specific Outsider.",
@@ -28,6 +30,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/e/ec/Investigator_Token.png/540px-Investigator_Token.png",
+    "shortDesc":  "You start knowing that 1 of 2 players is a particular Minion.",
     "desc": [
       "The Investigator learns that a specific Minion is in play, but not who is playing it.",
       "  ○  During the first night, the Investigator is woken and shown two players, but only learns the character of one of them.",
@@ -39,6 +42,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/4/4c/Chef_Token.png/540px-Chef_Token.png",
+    "shortDesc":  "You start knowing how many pairs of evil players there are.",
     "desc": [
       "The Chef learns if evil players are sitting next to each other.",
       "  ○  On the first night, the Chef learns exactly how many pairs there are in total. A pair is two players, but one player may be a part of two pairs. So, two players sitting next to each other count as one pair, three players sitting next to each other count as two pairs. Four players sitting next to each other count as three pairs. And so on.",
@@ -50,6 +54,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/6/61/Empath_Token.png/540px-Empath_Token.png",
+    "shortDesc":  "Each night, you learn how many of your 2 alive neighbours are evil.",
     "desc": [
       "The Empath keeps learning whether their neighbors are evil.",
       "  ○  The Empath only learns how many of their neighbors are evil, not which one is evil.",
@@ -62,6 +67,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/3/3a/Fortune_Teller_Token.png/540px-Fortune_Teller_Token.png",
+    "shortDesc":  "Teller Each night, choose 2 players: you learn if either is a Demon. There is 1 good player that registers falsely to you.",
     "desc": [
       "The Fortune Teller can detect who the Demon is, but sometimes thinks good players are Demons.",
       "  ○  Each night, the Fortune Teller chooses two players and learns if at least one of them is a Demon. They do not learn which of them is a Demon, just that one of them is. If neither is the Demon, they learn this instead.",
@@ -74,6 +80,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/f/fe/Undertaker_Token.png/540px-Undertaker_Token.png",
+    "shortDesc":  "Each night*, you learn which character died by execution today.",
     "desc": [
       "The Undertaker learns which character was executed today.",
       "  ○  The player must have died from execution for the Undertaker to learn who they are. Deaths during the day for other reasons, such as the Gunslinger choosing a player to kill, or the exile of a Traveler, do not count. Execution without death—rare as it is—does not count.",
@@ -87,6 +94,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/1/1b/Monk_Token.png/540px-Monk_Token.png",
+    "shortDesc":  "Each night*, choose a player (not yourself): they are safe from the Demon tonight.",
     "desc": [
       "The Monk protects other people from the Demon.",
       "  ○  Each night except the first, the Monk may choose to protect any player except themself.",
@@ -99,6 +107,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/4/45/Ravenkeeper_Token.png/540px-Ravenkeeper_Token.png",
+    "shortDesc":  "If you die at night, you are woken to choose a player: you learn their character.",
     "desc": [
       "The Ravenkeeper learns any player's character, but only if they die at night.",
       "  ○  The Ravenkeeper is woken on the night that they die, and chooses a player immediately.",
@@ -110,6 +119,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/5/5e/Virgin_Token.png",
+    "shortDesc":  "The 1st time you are nominated, if the nominator is a Townsfolk, they are executed immediately.",
     "desc": [
       "The Virgin is safe from execution...perhaps. In the process, they confirm if their nominator is a Townsfolk.",
       "  ○  If a Townsfolk nominates the Virgin, then that Townsfolk is executed immediately. Because there can only be one execution per day, the nomination process immediately ends, even if a player was about to die.",
@@ -123,6 +133,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/2/2f/Slayer_Token.png/540px-Slayer_Token.png",
+    "shortDesc":  "Once per game, during the day, publicly choose a player: if they are the Demon, they die.",
     "desc": [
       "The Slayer can kill the Demon by guessing who it is.",
       "  ○  The Slayer can choose to use their ability at any time during the day, and must declare to everyone when they’re using it. If the Slayer chooses the Demon, the Demon dies immediately. Otherwise, nothing happens.",
@@ -137,6 +148,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/9/9e/Soldier_Token.png/540px-Soldier_Token.png",
+    "shortDesc":  "You are safe from the Demon.",
     "desc": [
       "The Soldier cannot be killed by the Demon.",
       "  ○  The Soldier cannot die due to the Demon’s ability. So, if the Imp attacks the Soldier at night, nothing happens. Nobody dies. The Imp does not get to choose another player to attack instead.",
@@ -149,6 +161,7 @@
     "type": "townsfolk",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/c/c4/Mayor_Token.png/540px-Mayor_Token.png",
+    "shortDesc":  "If only 3 players live & no execution occurs, your team wins. If you die at night, another player might die instead.",
     "desc": [
       "The Mayor can win by peaceful means on the final day.",
       "  ○  To survive, the Mayor sometimes *accidentally* gets someone else killed. If the Mayor is attacked, you may choose that a different player dies. Nobody learns how the player died at night, just that they died.",
@@ -164,6 +177,7 @@
     "type": "outsider",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/1/1a/Butler_Token.png/540px-Butler_Token.png",
+    "shortDesc":  "Each night, choose a player (not yourself): tomorrow, you may only vote if they are voting too.",
     "desc": [
       "The Butler may only vote when their Master votes.",
       "  ○  Each night, the Butler chooses a player to be their master. The next day, the Butler may only have their hand raised to vote if their master is voting too.",
@@ -180,6 +194,7 @@
     "type": "outsider",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/0/03/Drunk_Token.png/540px-Drunk_Token.png",
+    "shortDesc":  "You do not know you are the Drunk. You think you are a Townsfolk, but your ability malfunctions.",
     "desc": [
       "The Drunk thinks they are a Townsfolk and has no idea that they are actually the Drunk.",
       "  ○  During setup, the Drunk's token does not go in the bag. Instead, a Townsfolk character token goes in the bag, and the player who draws that token is secretly the Drunk for the whole game. You know. They do not.",
@@ -191,6 +206,7 @@
     "type": "outsider",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/b/bb/Recluse_Token.png/540px-Recluse_Token.png",
+    "shortDesc":  "You might register as evil & as a Minion or Demon, even if dead.",
     "desc": [
       "The Recluse might appear evil but is actually good.",
       "  ○  Whenever the Recluse’s alignment is detected, the Storyteller chooses whether the Recluse registers as good or evil.",
@@ -203,6 +219,7 @@
     "type": "outsider",
     "team": "good",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/7/77/Saint_Token.png/540px-Saint_Token.png",
+    "shortDesc":  "If you die by execution, your team loses.",
     "desc": [
       "The Saint ends the game if they are executed.",
       "  ○  If the Saint dies by execution, the game ends. Good loses and evil wins.",
@@ -215,6 +232,7 @@
     "type": "minion",
     "team": "evil",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/a/af/Poisoner_Token.png/540px-Poisoner_Token.png",
+    "shortDesc":  "Each night, choose a player: their ability malfunctions tonight and tomorrow day.",
     "desc": [
       "The Poisoner secretly disrupts character abilities.",
       "  ○  Each night, the Poisoner chooses someone to poison for that night and the entire next day.",
@@ -227,6 +245,7 @@
     "type": "minion",
     "team": "evil",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/3/31/Spy_Token.png/540px-Spy_Token.png",
+    "shortDesc":  "Each night, you see the Grimoire. You might register as good & as a Townsfolk or Outsider, even if dead.",
     "desc": [
       "The Spy knows who everyone is and might appear good, but is actually evil.",
       "  ○  If any character has an ability that would detect or affect a good player, then the Spy might register as good to that character. If any character has an ability that detects Townsfolk or Outsiders, then the Spy might register as a specific Townsfolk or Outsider to that player. As always, it is your choice as to what the Spy registers as, even as many characters or both alignments during the same night.",
@@ -238,6 +257,7 @@
     "type": "minion",
     "team": "evil",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/7/7c/Scarlet_Woman_Token.png/540px-Scarlet_Woman_Token.png",
+    "shortDesc":  "There are extra Outsiders in play. [+2 Outsiders]",
     "desc": [
       "The Baron changes the number of Outsiders in play.",
       "  ○  This change happens during setup, and does not revert if the Baron dies.",
@@ -249,6 +269,7 @@
     "type": "minion",
     "team": "evil",
     "image": "http://bloodontheclocktower.com/wiki/images/b/ba/Baron_Token.png",
+    "shortDesc":  "Woman If there are 5 or more players alive (Travellers don’t count) & the Demon dies, you become the Demon.",
     "desc": [
       "The Scarlet Woman becomes the Demon when the Demon dies.",
       "  ○  If there are five or more players just before the Demon dies—that is, four or more players left alive after the Demon dies—then the Scarlet Woman immediately becomes the Demon, and the game continues as if nothing happened.",
@@ -263,6 +284,7 @@
     "type": "demon",
     "team": "evil",
     "image": "http://bloodontheclocktower.com/wiki/images/thumb/4/42/Imp_Token.png/540px-Imp_Token.png",
+    "shortDesc":  "Each night*, choose a player: they die. If you kill yourself this way, a Minion becomes the Imp.",
     "desc": [
       "The Imp kills at night and can make copies of itself...for a terrible price.",
       "  ○  On each night except the first, the Imp chooses a player to kill. Because most characters act after the Demon, that player will probably not get to use their ability tonight.",
@@ -272,10 +294,13 @@
     ]
   },
 
+
   "fool": {
+    "set": "bad-moon-rising",
     "type": "townsfolk",
     "team": "good",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/b/ba/Fool_Token.png/540px-Fool_Token.png",
+    "shortDesc": "The first time you die, you don't.",
     "desc": [
       "The Fool escapes death...once.",
       "  ○   The first time the Fool dies for any reason, the Fool remains alive. They don’t learn that their ability saved their life.",
@@ -284,9 +309,11 @@
   },
 
   "grandmother": {
+    "set": "bad-moon-rising",
     "type": "townsfolk",
     "team": "good",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/3/3a/Grandmother_Token.png/540px-Grandmother_Token.png",
+    "shortDesc": "You start knowing a good player & character. If the Demon kills them, you die too.",
     "desc": [
       "The Grandmother knows who their Grandchild is, but if their Grandchild is killed by the Demon, the Grandmother dies too.",
       "  ○   During the first night, the Grandmother learns their Grandchild—a good player who is a Townsfolk or Outsider. The Grandchild does not learn that they have a Grandmother.",
@@ -295,9 +322,11 @@
   },
 
   "moonchild": {
+    "set": "bad-moon-rising",
     "type": "outsider",
     "team": "good",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/4/4c/Moonchild_Token.png/540px-Moonchild_Token.png",
+    "shortDesc": "When you learn that you are dead, choose 1 alive player: if good, they die tonight.",
     "desc": [
       "The Moonchild curses somebody upon death, making them die too.",
       "  ○   The Moonchild must choose a player within a minute or two of learning that they are dead. This means they do this after they die by execution, or at dawn when the Storyteller declares who died at night. The Moonchild can take their time in making this decision, and get advice from the group before doing so, but the decision must be made.",
@@ -307,9 +336,11 @@
   },
 
   "devils_advocate": {
+    "set": "bad-moon-rising",
     "type": "minion",
     "team": "evil",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/2/23/Devils_Advocate_Token.png/540px-Devils_Advocate_Token.png",
+    "shortDesc": "Each night, choose a living player (not the same as last night): if executed tomorrow, they do not die.",
     "desc": [
       "The Devil's Advocate prevents players from dying by execution.",
       "  ○   Each night, the Devil’s Advocate chooses a player to protect from death by execution. The next day, if that player is executed, the execution succeeds but the player remains alive.",
@@ -318,9 +349,11 @@
   },
 
   "professor": {
+    "set": "bad-moon-rising",
     "type": "townsfolk",
     "team": "good",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/a/ac/Professor_Token.png/540px-Professor_Token.png",
+    "shortDesc": "Once per game, at night*, choose a dead player: if they are a Townsfolk, they are resurrected.",
     "desc": [
       "The Professor can bring someone back from the dead.",
       "  ○   Once per game, the Professor chooses a dead player. If that player is a Townsfolk, they are resurrected, becoming alive again.",
@@ -331,9 +364,11 @@
   },
 
   "sailor": {
+    "set": "bad-moon-rising",
     "type": "townsfolk",
     "team": "good",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/0/01/Sailor_Token.png/540px-Sailor_Token.png",
+    "shortDesc": "Each night, choose a living player: either you, or they, are drunk until dusk. You can not die.",
     "desc": [
       "The Sailor is either drunk or getting somebody else drunk While the Sailor is sober, they cannot die.",
       "  ○   Each night, the Sailor chooses a player, who will probably get drunk.",
@@ -342,9 +377,11 @@
     ]
   },
   "tea_lady": {
+    "set": "bad-moon-rising",
     "type": "townsfolk",
     "team": "good",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/e/e7/Tea_Lady_Token.png/540px-Tea_Lady_Token.png",
+    "shortDesc": "If both your alive neighbours are good, they can not die.",
     "desc": [
       "The Tea Lady protects her neighbors from death...as long as they are good.",
       "  ○   If both alive neighbors of the Tea Lady are currently good, those neighbors cannot die. The Demon cannot kill them, nor the Godfather, nor the Gossip. If they are executed, they do not die. The only exception is the Assassin, who can kill someone protected from death.",
@@ -352,10 +389,76 @@
       "  ○   However, if one or both of these alive neighbors is evil, then either may die. If the evil player dies, and the Tea Lady is now sitting next to 2 good players, neither can die."
     ]
   },
+
+  "chambermaid": {
+    "set": "bad-moon-rising",
+    "type": "townsfolk",
+    "team": "good",
+    "shortDesc": "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.",
+    "desc": []
+  },
+
+  "exorcist": {
+    "set": "bad-moon-rising",
+    "type": "townsfolk",
+    "team": "good",
+    "shortDesc": "Each night*, choose a player (not the same as last night): the Demon, if chosen, learns who you are & does not act tonight.",
+    "desc": []
+  },
+
+  "innkeeper": {
+    "set": "bad-moon-rising",
+    "type": "townsfolk",
+    "team": "good",
+    "shortDesc": "Each night*, choose 2 players: they can not die tonight, but 1 is drunk until dusk.",
+    "desc": []
+  },
+
+  "gambler": {
+    "set": "bad-moon-rising",
+    "type": "townsfolk",
+    "team": "good",
+    "shortDesc": "Each night*, choose a player & guess their character: if you guess wrong, you die.",
+    "desc": []
+  },
+
+  "gossip": {
+    "set": "bad-moon-rising",
+    "type": "townsfolk",
+    "team": "good",
+    "shortDesc": "Each day, you may make a public statement. Tonight, if it was true, a player dies.",
+    "desc": []
+  },
+
+  "courtier": {
+    "set": "bad-moon-rising",
+    "type": "townsfolk",
+    "team": "good",
+    "shortDesc": "Once per game, at night, choose a character: they are drunk for 3 nights & 3 days.",
+    "desc": []
+  },
+
+  "minstrel": {
+    "set": "bad-moon-rising",
+    "type": "townsfolk",
+    "team": "good",
+    "shortDesc": "If a Minion died today, all other players (except Travellers) are drunk from dusk until tomorrow dusk.",
+    "desc": []
+  },
+
+  "pacifist": {
+    "set": "bad-moon-rising",
+    "type": "townsfolk",
+    "team": "good",
+    "shortDesc": "Executed good players might not die.",
+    "desc": []
+  },
+
   "sweetheart": {
     "type": "outsider",
     "team": "good",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/3/34/Sweetheart_Token.png/540px-Sweetheart_Token.png",
+    "shortDesc": "TODO!!",
     "desc": [
       "The Sweetheart, when they die, makes someone drunk for the rest of the game.",
       "  ○   The Storyteller chooses which player becomes drunk.",
@@ -363,10 +466,28 @@
     ]
   },
 
+  "tinker": {
+    "set": "bad-moon-rising",
+    "type": "outsider",
+    "team": "good",
+    "shortDesc": "You might die at any time.",
+    "desc": []
+  },
+
+  "goon": {
+    "set": "bad-moon-rising",
+    "type": "outsider",
+    "team": "good",
+    "shortDesc": "Each night, the 1st player to choose you with their ability is drunk until dusk. You become their alignment.",
+    "desc": []
+  },
+
   "lunatic": {
+    "set": "bad-moon-rising",
     "type": "outsider",
     "team": "good",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/5/56/Lunatic_Token.png/540px-Lunatic_Token.png",
+    "shortDesc": "You think you are a Demon, but your abilities malfunction. The Demon knows who you are & whom you attack.",
     "desc": [
       "The Lunatic thinks that they are the Demon.",
       "  ○   Much like the Drunk, the Lunatic does not know their real character or real alignment. They are woken each night to attack as if they were the Demon that’s in play, but their choices have no effect because they have no Demon ability.",
@@ -374,11 +495,36 @@
       "  ○   The real Demon knows which players the Lunatic chose to attack each night."
     ]
   },
+  
+  "godfather": {
+    "set": "bad-moon-rising",
+    "type": "minion",
+    "team": "evil",
+    "shortDesc": "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [−1 or +1 Outsider]",
+    "desc": []
+  },
+
+  "assassin": {
+    "set": "bad-moon-rising",
+    "type": "minion",
+    "team": "evil",
+    "shortDesc": "Once per game, at night*, choose a player: they die, even if for some reason they could not.",
+    "desc": []
+  },
+
+  "mastermind": {
+    "set": "bad-moon-rising",
+    "type": "minion",
+    "team": "evil",
+    "shortDesc": "If the Demon dies by execution, play for 1 more day. If a player is then executed, their team loses.",
+    "desc": []
+  },
 
   "evil_twin": {
     "type": "minion",
     "team": "evil",
     "image": "https://bloodontheclocktower.com/wiki/images/2/24/Evil_Twin_Token.png",
+    "shortDesc": "TODO!!",
     "desc": [
       "The Evil Twin mirrors a good character, and the players don'tknow which twin is good and which twin is evil.",
       "  ○   During the first night, the Evil Twin and a good player, called the Good Twin, wake to learn who each other are. If the Good Twin is executed, evil wins.",
@@ -391,6 +537,7 @@
     "type": "minion",
     "team": "evil",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/c/cc/Witch_Token.png/540px-Witch_Token.png",
+    "shortDesc": "TODO!!",
     "desc": [
       "The Witch curses players, so that they die if they nominate.",
       "  ○   Each night, the Witch chooses a player to curse. That player dies if they nominate any player on the next day, although their nomination still counts.",
@@ -403,6 +550,7 @@
     "type": "demon",
     "team": "evil",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/e/e6/Fang_Gu_Token.png/540px-Fang_Gu_Token.png",
+    "shortDesc": "TODO!!",
     "desc": [
       "The Fang Gu possesses Outsiders.",
       "  ○   The first time a Fang Gu attacks an Outsider, the Fang Gu dies, and the Outsider becomes a Fang Gu and turns evil.",
@@ -413,9 +561,11 @@
   },
 
   "zombuul": {
+    "set": "bad-moon-rising",
     "type": "demon",
     "team": "evil",
     "image": "https://bloodontheclocktower.com/wiki/images/thumb/c/c6/Zombuul_Token.png/540px-Zombuul_Token.png",
+    "shortDesc": "Each night*, if no-one died today, choose a player: they die. The 1st time you die, you live but register as dead.",
     "desc": [
       "The Zombuul secretly remains alive while in the grave.",
       "  ○   When the Zombuul would die for any reason, it actually doesn’t die, but the Storyteller acts as if the player has died. The second time the Zombuul dies, it dies for real, and good wins.",
@@ -427,5 +577,29 @@
       "  ○   The once-killed zombuul should register as dead. Things that count dead players would count a once-killed zombuul, and this zombuul is not considered 'alive' for any other abilities.",
       "  ○   However, the once-killed zombuul did not actually 'die'. Undertaker gets no info after the zombuul is executed once because it did not die."
     ]
+  },
+  
+  "pukka": {
+    "set": "bad-moon-rising",
+    "type": "demon",
+    "team": "evil",
+    "shortDesc": "Each night, choose a player: they are poisoned until tomorrow night, then die. You act on the first night.",
+    "desc": []
+  },
+
+  "shabaloth": {
+    "set": "bad-moon-rising",
+    "type": "demon",
+    "team": "evil",
+    "shortDesc": "Each night*, choose 2 players: they die. A dead player you chose last night might be regurgitated.",
+    "desc": []
+  },
+
+  "po": {
+    "set": "bad-moon-rising",
+    "type": "demon",
+    "team": "evil",
+    "shortDesc": "Each night*, you may choose a player: they die. If you chose no-one last night, choose 3 players tonight",
+    "desc": []
   }
 }

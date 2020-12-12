@@ -10,6 +10,7 @@ interface ICharacter {
   team: "good" | "evil";
   image: string;
   desc: string[];
+  shortDesc: string;
 }
 interface ICharacters {
   [key: string]: ICharacter;
@@ -28,11 +29,15 @@ export const character = (message: Message, additional_args: string[] = []) => {
     const character = characters[charName];
 
     if (character) {
+      const description = character.desc?.length
+        ? character.desc.join("\n")
+        : character.shortDesc;
+
       const embedMessage = new MessageEmbed();
       embedMessage
         .setThumbnail(character.image)
         .setTitle(arg)
-        .setDescription(character.desc.join("\n"));
+        .setDescription(description);
       message.reply(embedMessage);
       return;
     }
