@@ -454,18 +454,6 @@
     "desc": []
   },
 
-  "sweetheart": {
-    "type": "outsider",
-    "team": "good",
-    "image": "https://bloodontheclocktower.com/wiki/images/thumb/3/34/Sweetheart_Token.png/540px-Sweetheart_Token.png",
-    "shortDesc": "TODO!!",
-    "desc": [
-      "The Sweetheart, when they die, makes someone drunk for the rest of the game.",
-      "  ○   The Storyteller chooses which player becomes drunk.",
-      "  ○   This ability works while the Sweetheart is dead."
-    ]
-  },
-
   "tinker": {
     "set": "bad-moon-rising",
     "type": "outsider",
@@ -520,46 +508,6 @@
     "desc": []
   },
 
-  "evil_twin": {
-    "type": "minion",
-    "team": "evil",
-    "image": "https://bloodontheclocktower.com/wiki/images/2/24/Evil_Twin_Token.png",
-    "shortDesc": "TODO!!",
-    "desc": [
-      "The Evil Twin mirrors a good character, and the players don'tknow which twin is good and which twin is evil.",
-      "  ○   During the first night, the Evil Twin and a good player, called the Good Twin, wake to learn who each other are. If the Good Twin is executed, evil wins.",
-      "  ○   If the Demon dies but both twins are still alive, the game continues. But... if the two Twins are the only two players left alive, not including Travelers, then evil wins just like it normally would.",
-      "  ○   If a Pit-Hag creates an Evil Twin, a player of the opposing alignment becomes a twin."
-    ]
-  },
-
-  "witch": {
-    "type": "minion",
-    "team": "evil",
-    "image": "https://bloodontheclocktower.com/wiki/images/thumb/c/cc/Witch_Token.png/540px-Witch_Token.png",
-    "shortDesc": "TODO!!",
-    "desc": [
-      "The Witch curses players, so that they die if they nominate.",
-      "  ○   Each night, the Witch chooses a player to curse. That player dies if they nominate any player on the next day, although their nomination still counts.",
-      "  ○   The Witch’s curse lasts only for one day, but the Witch may curse the same player again and again each night.",
-      "  ○   As soon as just three players are left alive, the Witch’s curse is immediately removed, and the Witch acts no more."
-    ]
-  },
-
-  "fang_gu": {
-    "type": "demon",
-    "team": "evil",
-    "image": "https://bloodontheclocktower.com/wiki/images/thumb/e/e6/Fang_Gu_Token.png/540px-Fang_Gu_Token.png",
-    "shortDesc": "TODO!!",
-    "desc": [
-      "The Fang Gu possesses Outsiders.",
-      "  ○   The first time a Fang Gu attacks an Outsider, the Fang Gu dies, and the Outsider becomes a Fang Gu and turns evil.",
-      "  ○   This can only happen once per game. If the new Fang Gu attacks an Outsider, the Outsider dies as normal.",
-      "  ○   The new Fang Gu counts as the Demon, and good wins if they die. They do not, however, learn which players are Minions.",
-      "  ○   There is an extra Outsider in play."
-    ]
-  },
-
   "zombuul": {
     "set": "bad-moon-rising",
     "type": "demon",
@@ -601,5 +549,221 @@
     "team": "evil",
     "shortDesc": "Each night*, you may choose a player: they die. If you chose no-one last night, choose 3 players tonight",
     "desc": []
-  }
+  },
+
+    "clockmaker": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "You start knowing how many steps from the Demon to nearest Minion.",
+      "desc": []
+  },
+  "dreamer": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "Each night, choose a player (not yourself): you learn 1 good character and 1 evil character, 1 of which is correct.",
+      "desc": []
+  },
+  "snake_charmer": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "Each night, choose an alive player: a chosen Demon swaps characters & alignments with you & is then poisoned.",
+      "desc": []
+  },
+  "mathematician": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "Each night, you learn how many players’ abilities worked abnormally (since dawn) due to another character's ability.",
+      "desc": []
+  },
+  "flowergirl": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "Each night*, you learn if the Demon voted today.",
+      "desc": []
+  },
+  "town_crier": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "Each night*, you learn if a Minion nominated today.",
+      "desc": []
+  },
+  "oracle": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "Each night*, you learn how many dead players are evil.",
+      "desc": []
+  },
+  "savant": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "Each day, you may visit the Storyteller to learn 2 things in private: 1 is true & 1 is false.",
+      "desc": []
+  },
+  "seamstress": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "Once per game, at night, choose 2 players (not yourself): you learn if they are the same alignment.",
+      "desc": []
+  },
+  "philosopher": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "Once per game, at night, choose a good character: become them. If you duplicate an in-play character, they are drunk.",
+      "desc": []
+  },
+  "artist": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "Once per game, during the day, privately ask the Storyteller any yes/no question.",
+      "desc": []
+  },
+  "juggler": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "On your 1st day, publicly guess up to 5 player's characters. That night, you learn how many you got correct.",
+      "desc": []
+  },
+  "sage": { 
+      "set": "sects-and-violets",
+      "type": "townsfolk",
+      "team": "good",
+      "shortDesc": "If the Demon kills you, you learn that it is 1 of 2 players.",
+      "desc": []
+  },
+
+  "mutant": { 
+      "set": "sects-and-violets",
+      "type": "outsider",
+      "team": "good",
+      "shortDesc": "If you are “mad” about being an Outsider, you might be executed.",
+      "desc": []
+  },
+  "sweetheart": {
+    "set": "sects-and-violets",
+    "type": "outsider",
+    "team": "good",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/3/34/Sweetheart_Token.png/540px-Sweetheart_Token.png",
+    "shortDesc": "If you die, 1 player is drunk from now on.",
+    "desc": [
+      "The Sweetheart, when they die, makes someone drunk for the rest of the game.",
+      "  ○   The Storyteller chooses which player becomes drunk.",
+      "  ○   This ability works while the Sweetheart is dead."
+    ]
+  },
+  "barber": { 
+      "set": "sects-and-violets",
+      "type": "outsider",
+      "team": "good",
+      "shortDesc": "If you die, tonight the Demon may choose 2 players to swap characters.",
+      "desc": []
+  },
+  "klutz": { 
+      "set": "sects-and-violets",
+      "type": "outsider",
+      "team": "good",
+      "shortDesc": "When you learn that you died, publicly choose 1 alive player: if they are evil, your team loses.",
+      "desc": []
+  },
+
+  "evil_twin": {
+    "set": "sects-and-violets",
+    "type": "minion",
+    "team": "evil",
+    "image": "https://bloodontheclocktower.com/wiki/images/2/24/Evil_Twin_Token.png",
+    "shortDesc": "Twin You & an opposing player know each other. If the good player is executed, evil wins. Good can't win if you both live.",
+    "desc": [
+      "The Evil Twin mirrors a good character, and the players don'tknow which twin is good and which twin is evil.",
+      "  ○   During the first night, the Evil Twin and a good player, called the Good Twin, wake to learn who each other are. If the Good Twin is executed, evil wins.",
+      "  ○   If the Demon dies but both twins are still alive, the game continues. But... if the two Twins are the only two players left alive, not including Travelers, then evil wins just like it normally would.",
+      "  ○   If a Pit-Hag creates an Evil Twin, a player of the opposing alignment becomes a twin."
+    ]
+  },
+  "witch": {
+    "set": "sects-and-violets",
+    "type": "minion",
+    "team": "evil",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/c/cc/Witch_Token.png/540px-Witch_Token.png",
+    "shortDesc": "Each night, choose a player: if they nominate tomorrow, they die. If just 3 players live, you lose this ability.",
+    "desc": [
+      "The Witch curses players, so that they die if they nominate.",
+      "  ○   Each night, the Witch chooses a player to curse. That player dies if they nominate any player on the next day, although their nomination still counts.",
+      "  ○   The Witch’s curse lasts only for one day, but the Witch may curse the same player again and again each night.",
+      "  ○   As soon as just three players are left alive, the Witch’s curse is immediately removed, and the Witch acts no more."
+    ]
+  },
+  "cerenovus": { 
+      "set": "sects-and-violets",
+      "type": "minion",
+      "team": "evil",
+      "shortDesc": "Each night, choose a player & a good character: they are “mad” about being this character tomorrow, or might be executed.",
+      "desc": []
+  },
+  "pit_hag": { 
+      "set": "sects-and-violets",
+      "type": "minion",
+      "team": "evil",
+      "shortDesc": "Each night*, choose a player & a character they become (if not-in-play). If a Demon is made, deaths tonight are arbitrary.",
+      "desc": []
+  },
+
+
+  "fang_gu": {
+    "set": "sects-and-violets",
+    "type": "demon",
+    "team": "evil",
+    "image": "https://bloodontheclocktower.com/wiki/images/thumb/e/e6/Fang_Gu_Token.png/540px-Fang_Gu_Token.png",
+    "shortDesc": "Each night*, choose a player: they die. The 1st Outsider chosen becomes an evil Fang Gu & you die instead. [+1 Outsider]",
+    "desc": [
+      "The Fang Gu possesses Outsiders.",
+      "  ○   The first time a Fang Gu attacks an Outsider, the Fang Gu dies, and the Outsider becomes a Fang Gu and turns evil.",
+      "  ○   This can only happen once per game. If the new Fang Gu attacks an Outsider, the Outsider dies as normal.",
+      "  ○   The new Fang Gu counts as the Demon, and good wins if they die. They do not, however, learn which players are Minions.",
+      "  ○   There is an extra Outsider in play."
+    ]
+  },
+
+  "vigormortis": { 
+      "set": "sects-and-violets",
+      "type": "demon",
+      "team": "evil",
+      "shortDesc": "Each night*, choose a player: they die. Minions you kill keep their ability & poison 1 Townsfolk neighbour. [−1 Outsider]",
+      "desc": []
+  },
+  "no_dashii": { 
+      "set": "sects-and-violets",
+      "type": "demon",
+      "team": "evil",
+      "shortDesc": "Each night*, choose a player: they die. Your 2 Townsfolk neighbours are poisoned.",
+      "desc": []
+  },
+  "vortox": { 
+      "set": "sects-and-violets",
+      "type": "demon",
+      "team": "evil",
+      "shortDesc": "Each night*, choose a player; they die. Good abilities yield false information. Each day, if no-one was executed, evil wins.",
+      "desc": []
+   },
+
+   "sentinel": {
+      "set": "unknown",
+      "type": "fabled",
+      "team": "good",
+      "image": "https://bloodontheclocktower.com/wiki/images/thumb/9/9d/Sentinel_Token.png/540px-Sentinel_Token.png",
+      "shortDesc": "There might be 1 extra or 1 fewer Outsider in-play.",
+      "desc": ["There might be 1 extra or 1 fewer Outsider in-play.", "The storyteller decides at the start of the game if they want to change the count of outsiders by one in either direction, or keep it the same."]
+      
+   }
+  
 }

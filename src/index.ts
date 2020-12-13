@@ -17,7 +17,7 @@ import { timer } from "./commands/timer";
 import { townSquare } from "./commands/townsquare";
 import { announce } from "./commands/announce";
 import { raiseHand, lowerHand } from "./commands/handVoting";
-import { scripts } from "./commands/scripts";
+import { scripts, getScript } from "./commands/scripts";
 import { order } from "./commands/order";
 const logger = require("winston");
 const auth = require("../auth.json");
@@ -51,7 +51,7 @@ client.on("message", async (message) => {
   }
 
   if (delimeter === "!" || delimeter === ".") {
-    const allMembers = await message.guild.members.fetch();
+    const allMembers = await message.guild?.members.fetch();
     var args = message.content.substring(1).split(" ");
     var cmd = args[0].toLowerCase();
 
@@ -103,9 +103,15 @@ client.on("message", async (message) => {
         return;
       } else if (["scripts"].includes(cmd)) {
         logger.info(
-          `[G${gameNumber}] Script Command, more_args = [${additional_args}]`
+          `[G${gameNumber}] Scripts Command, more_args = [${additional_args}]`
         );
         scripts(message);
+        return;
+      } else if (["script"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Get Script Command, more_args = [${additional_args}]`
+        );
+        getScript(message, additional_args);
         return;
       } else if (["order", "night-order", "ord", "night_order"].includes(cmd)) {
         logger.info(

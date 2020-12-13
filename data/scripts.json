@@ -153,5 +153,32 @@
     "devils_advocate",
     "witch",
     "pukka"
+  ],
+  "hostile_allegiances": [
+    "snake_charmer",
+    "juggler",
+    "investigator",
+    "empath",
+    "professor",
+    "exorcist",
+    "gambler",
+    "town_crier",
+    "oracle",
+    "ravenkeeper",
+    "sage",
+    "philosopher",
+    "tea_lady",
+    "barber",
+    "lunatic",
+    "butler",
+    "goon",
+    "goblin",
+    "pit_hag",
+    "mastermind",
+    "scarlet_woman",
+    "fang_gu",
+    "imp",
+    "vigormortis",
+    "zombuul"
   ]
 }

@@ -16,11 +16,10 @@ export const order = (message: Message, additional_args: string[] = []) => {
   }
 
   let error = false;
-  const firstNightSorted2 = nightOrder["firstNight"].filter((char) => {
-    console.log(char, "is ", script.includes(toUnformattedKey(char)));
+  const firstNightSorted = nightOrder["firstNight"].filter((char) => {
     return script.includes(toUnformattedKey(char));
   });
-  const otherNightSorted2 = nightOrder["otherNight"].filter((char) =>
+  const otherNightSorted = nightOrder["otherNight"].filter((char) =>
     script.includes(toUnformattedKey(char))
   );
 
@@ -31,10 +30,10 @@ export const order = (message: Message, additional_args: string[] = []) => {
 
   message.channel.send(
     "First Night Order:\n```\n" +
-      firstNightSorted2.join("\n") +
+      firstNightSorted.join("\n") +
       "```\n" +
       "Other Night Order:\n```\n" +
-      otherNightSorted2.join("\n") +
+      otherNightSorted.join("\n") +
       "```"
   );
 };

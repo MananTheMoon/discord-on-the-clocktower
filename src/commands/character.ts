@@ -4,15 +4,15 @@ import { toUnformattedKey } from "../utils/stringUtils";
 
 // TODO (Manan) - Define these enumerated types elsewhere
 
-interface ICharacter {
+export interface ICharacter {
   set: string;
-  type: "townsfolk" | "outsider" | "minion" | "demon";
+  type: "townsfolk" | "outsider" | "minion" | "demon" | "fabled";
   team: "good" | "evil";
   image: string;
   desc: string[];
   shortDesc: string;
 }
-interface ICharacters {
+export interface ICharacters {
   [key: string]: ICharacter;
 }
 
