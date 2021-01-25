@@ -19,6 +19,7 @@ import { announce } from "./commands/announce";
 import { raiseHand, lowerHand } from "./commands/handVoting";
 import { scripts, getScript } from "./commands/scripts";
 import { order } from "./commands/order";
+import { afk, notAfk } from "./commands/afk";
 const logger = require("winston");
 const auth = require("../auth.json");
 
@@ -124,6 +125,18 @@ client.on("message", async (message) => {
           `[G${gameNumber}] Town Square Command, more_args = [${additional_args}]`
         );
         townSquare(message, gameNumber);
+        return;
+      } else if (["afk", "away"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Away Command, more_args = [${additional_args}]`
+        );
+        afk(message, additional_args, gameNumber);
+        return;
+      } else if (["notafk", "unafk", "here"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Away Command, more_args = [${additional_args}]`
+        );
+        notAfk(message, additional_args, gameNumber);
         return;
       } else if (["announce", "public"].includes(cmd)) {
         logger.info(

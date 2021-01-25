@@ -1,5 +1,5 @@
 const GAME_PREFIX = /^([_]+)/;
-const FULL_PREFIX_GAMES_MATCHING = /^([_]*[0-9😵👻✅]*)+/;
+const FULL_PREFIX_GAMES_MATCHING = /^([_]*[0-9😵👻✅💨]*)+/;
 const NUMBER_PREFIX_GAME = /^[_]*[0-9]*[ ]*/;
 
 const GAME_PREFIXES = {
@@ -54,6 +54,14 @@ export const setStoryTeller = (nickname: string, game: number = 1): string => {
 
 export const setVoted = (nickname: string): string => {
   return nickname.replace(/[✅]/g, "");
+};
+
+export const setAfk = (nickname: string): string => {
+  return nickname.replace(FULL_PREFIX_GAMES_MATCHING, "$1💨");
+};
+
+export const setNotAfk = (nickname: string): string => {
+  return nickname.replace(/💨/g, "");
 };
 
 export const setUndead = (nickname: string): string => {

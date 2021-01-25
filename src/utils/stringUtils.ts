@@ -24,8 +24,16 @@ const filterWords = [
     replace: "country-music lover",
   },
   {
+    match: /prude/gi,
+    replace: "provably awesome person",
+  },
+  {
     match: /bastard/gi,
     replace: "buster",
+  },
+  {
+    match: /(cocaine|meth[ ]*$|meth[ ]+|speed|lsd|heroin)/gi,
+    replace: "prescription drugs",
   },
   {
     match: /bitch/gi,

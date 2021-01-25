@@ -23,6 +23,8 @@ export const help = (message: Discord.Message) => {
     "  .announce x  Publicly annouce a message x.\n" +
     "  .scripts     Returns known list of scripts.\n" +
     "  .order x     Returns night order for script x\n" +
+    "  .afk x       Marks the person at seat x as AFK x\n" +
+    "  .here x      Marks the person at seat x as HERE x\n" +
     "Admin Stuff:\n" +
     "  .reset        Resets all nicknames in the game\n" +
     "  .shuffle      Randomizes seating order.\n" +
