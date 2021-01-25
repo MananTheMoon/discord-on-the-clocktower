@@ -154,6 +154,19 @@
     "witch",
     "pukka"
   ],
+  "jugglers_purgatory": [
+    "professor",
+    "monk",
+    "fool",
+    "tea_lady",
+    "snake_charmer",
+    "juggler",
+    "barber",
+    "lunatic",
+    "scarlet_woman",
+    "mastermind",
+    "fang_gu"
+  ],
   "hostile_allegiances": [
     "snake_charmer",
     "juggler",
@@ -180,5 +193,32 @@
     "imp",
     "vigormortis",
     "zombuul"
+  ],
+  "snv": [
+    "artist",
+    "clockmaker",
+    "dreamer",
+    "flowergirl",
+    "juggler",
+    "mathematician",
+    "oracle",
+    "philosopher",
+    "sage",
+    "savant",
+    "seamstress",
+    "snake_charmer",
+    "town_crier",
+    "barber",
+    "klutz",
+    "mutant",
+    "sweetheart",
+    "cerenovus",
+    "evil_twin",
+    "pit_hag",
+    "witch",
+    "vortox",
+    "vigormortis",
+    "no_dashii",
+    "fang_gu"
   ]
 }
