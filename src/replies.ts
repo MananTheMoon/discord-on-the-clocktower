@@ -83,6 +83,9 @@ const replies: { [key: string]: string[] } = {
     "{arg} has died. The only thing that would've saved them is socialized medicine",
     "{arg} has died, and it's all because this town defunded the police. JK, but maybe the Demon symbolizes the police state? Food for thought.",
     "{arg} has died. This never would've happened if you were playing a nice game like Animal Crossing.",
+    "{arg} can no longer be traded on Robin Hood App.",
+    "{arg} is dead, but if it makes you feel any better, they've been shorting about a thousand shares of GME",
+    "{arg}, who doesn't understand how wallstreetbets works, has died while sitting on a few hundred AMC movie tickets that are expiring next week. Any takers?",
   ],
   undeadReplies: [
     "{arg} has come back to life. There's a handful of ways this could happen in game, but I'm willing to bet it's because one of you forked up and typed the wrong thing.",
@@ -97,7 +100,7 @@ const replies: { [key: string]: string[] } = {
   ],
   badNominationReplies: [
     "You gotta nominate someone, via their seat number (i.e. `.nom 5`)",
-    "There's something funky with your nomination, chief. Try something like `.nom 4` to nominate the person in seat 4",
+    "There's something funky with your nomination, boss. Try something like `.nom 4` to nominate the person in seat 4",
     "Yeah, I don't think you're following proper nomination protocol: `.nom seatNumber` (e.g. `.nom 3`)",
   ],
   badTimerReplies: [

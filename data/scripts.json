@@ -167,6 +167,19 @@
     "mastermind",
     "fang_gu"
   ],
+  "storytellers_saga": [
+    "artist",
+    "amnesiac",
+    "savant",
+    "dreamer",
+    "fool",
+    "undertaker",
+    "goon",
+    "saint",
+    "devils_advocate",
+    "witch",
+    "imp"
+  ],
   "hostile_allegiances": [
     "snake_charmer",
     "juggler",

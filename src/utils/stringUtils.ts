@@ -32,7 +32,7 @@ const filterWords = [
     replace: "buster",
   },
   {
-    match: /(cocaine|meth[ ]*$|meth[ ]+|speed|lsd|heroin)/gi,
+    match: /(cocaine|meth[ ]*$|meth[ ]+|lsd|heroin)/gi,
     replace: "prescription drugs",
   },
   {

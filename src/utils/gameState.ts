@@ -4,6 +4,7 @@ interface IGameState {
   [key: number]: {
     locked: boolean;
     lastTownSquareMessage?: Message;
+    script?: string;
     raisedHands: {
       [key: number]: boolean;
     };
@@ -45,6 +46,10 @@ export const setHandUp = (playerNumber: number, gameNumber: number = 1) => {
 
 export const setHandDown = (playerNumber: number, gameNumber: number = 1) => {
   gameState[gameNumber].raisedHands[playerNumber] = false;
+};
+
+export const setScript = (script: string, gameNumber: number = 1) => {
+  gameState[gameNumber].script = script;
 };
 
 export const lowerAllHands = (gameNumber: number = 1) => {
