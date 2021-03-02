@@ -20,6 +20,7 @@ import { raiseHand, lowerHand } from "./commands/handVoting";
 import { scripts, getScript } from "./commands/scripts";
 import { order } from "./commands/order";
 import { afk, notAfk } from "./commands/afk";
+import { mute, unmute } from "./commands/mute";
 const logger = require("winston");
 const auth = require("../auth.json");
 
@@ -102,24 +103,6 @@ client.on("message", async (message) => {
         );
         timer(message, additional_args);
         return;
-      } else if (["scripts"].includes(cmd)) {
-        logger.info(
-          `[G${gameNumber}] Scripts Command, more_args = [${additional_args}]`
-        );
-        scripts(message);
-        return;
-      } else if (["script"].includes(cmd)) {
-        logger.info(
-          `[G${gameNumber}] Get Script Command, more_args = [${additional_args}]`
-        );
-        getScript(message, additional_args);
-        return;
-      } else if (["order", "night-order", "ord", "night_order"].includes(cmd)) {
-        logger.info(
-          `[G${gameNumber}] Script Command, more_args = [${additional_args}]`
-        );
-        order(message, additional_args);
-        return;
       } else if (["ts", "townsquare"].includes(cmd)) {
         logger.info(
           `[G${gameNumber}] Town Square Command, more_args = [${additional_args}]`
@@ -156,6 +139,27 @@ client.on("message", async (message) => {
         );
         lowerHand(message, additional_args, gameNumber);
         return;
+      } else if (
+        [
+          "unmute",
+          "umute",
+          "unsilence",
+          "unquiet",
+          "unmuted",
+          "speak",
+        ].includes(cmd)
+      ) {
+        logger.info(
+          `[G${gameNumber}] Unmute Command, more_args = [${additional_args}]`
+        );
+        unmute(message, additional_args, gameNumber);
+        return;
+      } else if (["..", ".", "..."].includes(cmd) || cmd.startsWith("..")) {
+        logger.info(
+          `[G${gameNumber}] Ellipsis Command, more_args = [${additional_args}]`
+        );
+        message.channel.send(getRandomReply("ellipsis"));
+        return;
       }
     }
 
@@ -177,6 +181,12 @@ client.on("message", async (message) => {
         logger.info(`Shuffle Command`);
         shuffle(message, gameNumber);
         return;
+      } else if (["mute", "silence", "quiet", "muted"].includes(cmd)) {
+        logger.info(
+          `[G${gameNumber}] Mute Command, more_args = [${additional_args}]`
+        );
+        mute(message, additional_args, gameNumber);
+        return;
       }
     }
 
@@ -190,9 +200,28 @@ client.on("message", async (message) => {
       return;
     }
 
+    // Commands that are supported in DMs
     if (["c", "char", "character", "characters"].includes(cmd)) {
       logger.info(`Char Command, more_args = [${additional_args}]`);
       character(message, additional_args);
+      return;
+    } else if (["scripts"].includes(cmd)) {
+      logger.info(
+        `[G${gameNumber}] Scripts Command, more_args = [${additional_args}]`
+      );
+      scripts(message);
+      return;
+    } else if (["script"].includes(cmd)) {
+      logger.info(
+        `[G${gameNumber}] Get Script Command, more_args = [${additional_args}]`
+      );
+      getScript(message, additional_args);
+      return;
+    } else if (["order", "night-order", "ord", "night_order"].includes(cmd)) {
+      logger.info(
+        `[G${gameNumber}] Script Command, more_args = [${additional_args}]`
+      );
+      order(message, additional_args);
       return;
     }
 

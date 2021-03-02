@@ -8,6 +8,7 @@ import {
   getGameState,
 } from "../utils/gameState";
 import { townSquare } from "./townsquare";
+import { unmute } from "./mute";
 
 export const nominate = async (
   message: Message,
@@ -24,6 +25,7 @@ export const nominate = async (
   if (additional_args.length === 1) {
     if (["done", "over", "close", "complete"].includes(additional_args[0])) {
       finishNom(gameNumber, message);
+      unmute(message, ["all"], gameNumber);
 
       return;
     }

@@ -6,7 +6,7 @@ import { toUnformattedKey } from "../utils/stringUtils";
 import { ICharacters } from "./character";
 
 export const scripts = (message: Message) => {
-  message.channel.send(
+  message.reply(
     "The following scripts are known:\n" +
       "```\n" +
       Object.keys(scriptsDict)
@@ -18,13 +18,13 @@ export const scripts = (message: Message) => {
 
 export const getScript = (message: Message, additional_args: string[] = []) => {
   if (!additional_args.length) {
-    message.channel.send(getRandomReply("invalidCommand"));
+    message.reply(getRandomReply("invalidCommand"));
     return;
   }
   const scriptName = additional_args.join(" ");
   const script: string[] = scriptsDict[toUnformattedKey(scriptName)];
   if (!script) {
-    message.channel.send(getRandomReply("scriptNotFound"));
+    message.reply(getRandomReply("scriptNotFound"));
     return scripts(message);
   }
 
@@ -51,21 +51,21 @@ export const getScript = (message: Message, additional_args: string[] = []) => {
     );
   });
 
-  message.channel.send(`**${scriptName.toUpperCase()}**\n`);
+  message.reply(`**${scriptName.toUpperCase()}**\n`);
 
-  message.channel.send(
+  message.reply(
     "-----------------Townsfolk-----------------\n" +
       formattedChars.townsfolk.join("\n")
   );
-  message.channel.send(
+  message.reply(
     "-----------------Outsiders-----------------\n" +
       formattedChars.outsider.join("\n")
   );
-  message.channel.send(
+  message.reply(
     "\n-----------------Minions-----------------\n" +
       formattedChars.minion.join("\n")
   );
-  message.channel.send(
+  message.reply(
     "\n-----------------Demons-----------------\n" +
       formattedChars.demon.join("\n")
   );
@@ -76,6 +76,6 @@ export const getScript = (message: Message, additional_args: string[] = []) => {
 export const setScript = (message: Message, additional_args: string[] = []) => {
   const script: [] = scriptsDict[toUnformattedKey(additional_args.join(" "))];
   if (!script) {
-    message.channel.send(getRandomReply("scriptNotFound"));
+    message.reply(getRandomReply("scriptNotFound"));
   }
 };

@@ -52,6 +52,10 @@ export const setStoryTeller = (nickname: string, game: number = 1): string => {
   );
 };
 
+export const isStoryTeller = (nickname: string): boolean => {
+  return nickname && nickname.includes("00😵");
+};
+
 export const setVoted = (nickname: string): string => {
   return nickname.replace(/[✅]/g, "");
 };

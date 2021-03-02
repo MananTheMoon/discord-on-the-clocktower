@@ -140,12 +140,19 @@ const replies: { [key: string]: string[] } = {
     "Sorry, I haven't learned that one yet, and am unlikely to do so anytime soon.",
     "I don't know how to handle that command. If you don't mind telling me exactly what you'd like that command to accomplish (in valid Node JavaScript), I'll be sure to have Manan add it to my codebase!",
     "English, do you speak it? Because I don't. I'm just programmed to parse a handful of commands, and that's not one of them.",
+    "I wish I knew how to do that.",
   ],
   scriptNotFound: [
     "I've never heard of that script in my life.",
     "I searched high and low for that script, but came up empty.",
     "Oh my god, that is the biggest typo I've ever seen. It doesn't remotely resemble a script name.",
     "My search engine didn't find any results when looking for that script. But then again, I'm powered by Bing, so what do I know?",
+  ],
+  ellipsis: [
+    "Looks like you typed an ellipsis. Isn't it fun how I know that, but still responded!?",
+    "The starting period made it seem like you were talking to me, but then you followed it up with 2 more. Why?",
+    "Every time you start a sentence with a period, it wakes me up, and it makes Manan's fan kick on. If you're gonna do it just to type an ellipsis that isn't even meant for me, that's incredibly rude.",
+    "Please speak in complete clauses, no one likes when you start a sentence with 3 dots.",
   ],
 };
 
