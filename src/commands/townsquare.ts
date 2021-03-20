@@ -6,7 +6,11 @@ import * as CharacterCounts from "../../data/character-counts.json";
 import { getRandomReply } from "../replies";
 import { getGameState, setLastTownSquareMessage } from "../utils/gameState";
 
-export const townSquare = async (message: Message, gameNumber: number = 1) => {
+export const townSquare = async (
+  message: Message,
+  additional_args: string[] = [],
+  gameNumber: number = 1
+) => {
   const townSquareDescription = await getTownSquareContent(message, gameNumber);
   const embedMessage = new MessageEmbed()
     .setColor("#ff4000")

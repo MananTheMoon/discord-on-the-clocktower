@@ -5,7 +5,11 @@ import {
 } from "../utils/nicknameUtils";
 import { getMembersInGame } from "../utils/memberUtils";
 
-export const shuffle = (message: Discord.Message, gameNumber: number = 1) => {
+export const shuffle = (
+  message: Discord.Message,
+  additional_args: string[] = [],
+  gameNumber: number = 1
+) => {
   const members2 = message.guild.members.cache;
   const members = getMembersInGame(members2, gameNumber);
   const players = members.filter((member) => {

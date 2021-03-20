@@ -71,7 +71,7 @@ export const nominate = async (
         message.channel.send(getRandomReply("genericError"));
       })
       .then(() => {
-        townSquare(message, gameNumber);
+        townSquare(message, [], gameNumber);
       });
   } else {
     message.channel.send(getRandomReply("badNominationReplies"));

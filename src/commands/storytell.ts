@@ -2,7 +2,11 @@ import * as Discord from "discord.js";
 import { removeNicknamePrefix, setStoryTeller } from "../utils/nicknameUtils";
 import { getMemberFromSeat } from "../utils/memberUtils";
 
-export const storytell = (message: Discord.Message, gameNumber: number = 1) => {
+export const storytell = (
+  message: Discord.Message,
+  additional_args: string[] = [],
+  gameNumber: number = 1
+) => {
   const currentNick = message.member.nickname || message.member.user.username;
   if (message.member) {
     message.member.setNickname(setStoryTeller(currentNick, gameNumber));
