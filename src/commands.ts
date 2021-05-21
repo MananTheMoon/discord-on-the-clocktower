@@ -19,6 +19,7 @@ import { scripts, getScript } from "./commands/scripts";
 import { order } from "./commands/order";
 import { afk, notAfk } from "./commands/afk";
 import { mute, unmute } from "./commands/mute";
+import { comeback } from "./commands/comeback";
 
 interface ICommand {
   callback: (
@@ -154,6 +155,11 @@ export const commands: { [key: string]: ICommand } = {
   mute: {
     callback: mute,
     triggers: ["mute", "silence", "quiet", "muted"],
+    permissionGroups: [Group.RoomMember, Group.Storyteller],
+  },
+  comeback: {
+    callback: comeback,
+    triggers: ["comeback", "return", "opennoms"],
     permissionGroups: [Group.RoomMember, Group.Storyteller],
   },
 };

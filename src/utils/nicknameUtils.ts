@@ -13,7 +13,7 @@ export const getGameNumber = (nickname: string) => {
   if (gamePrefix) {
     return gamePrefix[0].length;
   }
-  return 1;
+  return 0;
 };
 
 export const setNicknamePrefixNumber = (
